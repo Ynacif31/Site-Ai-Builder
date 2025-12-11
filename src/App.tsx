@@ -1,0 +1,28 @@
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/home'
+import MyProjects from './pages/MyProjects'
+import Preview from './pages/Preview'
+import Pricing from './pages/Pricing'
+import Projects from './pages/Projects'
+import View from './pages/View'
+import Community from './pages/Community'
+
+const App = () => {
+  return (
+    <div>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/my-projects" element={<MyProjects />} />
+            <Route path="/preview/:projectId" element={<Preview />} />
+            <Route path="/preview/:projectId/:versionId" element={<Preview />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/view/:projectId" element={<View />} />
+            <Route path="/community" element={<Community />} />
+        </Routes>
+    </div>
+  )
+}
+
+export default App
